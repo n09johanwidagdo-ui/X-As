@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="40dp"
+            android:background="#1F2937" android:gravity="center_vertical"
+            android:orientation="horizontal" android:paddingStart="12dp" android:paddingEnd="4dp">
+
+            <TextView android:id="@+id/tvTitle"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:ellipsize="end" android:singleLine="true"
+                android:textColor="#FFFFFF" android:textSize="14sp" />
+
+            <Button android:id="@+id/btnExit"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content" android:layout_height="36dp"
+                android:minHeight="0dp" android:minWidth="0dp"
+                android:text="Keluar" android:textColor="#FCA5A5" android:textSize="12sp" />
+        </LinearLayout>
+
+        <ProgressBar android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent" android:layout_height="3dp"
+            android:visibility="gone" />
+
+        <WebView android:id="@+id/web"
+            android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/errorBox"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="#FFFFFF" android:clickable="true" android:focusable="true"
+        android:gravity="center" android:orientation="vertical" android:padding="32dp"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:gravity="center" android:text="Koneksi bermasalah.\nPeriksa jaringan lalu coba lagi."
+            android:textColor="#111827" android:textSize="16sp" />
+        <Button android:id="@+id/btnRetry"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="Muat ulang" />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/lockBox"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="#111827" android:clickable="true" android:focusable="true"
+        android:gravity="center" android:orientation="vertical" android:padding="32dp"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Ujian terkunci.\nAnda meninggalkan halaman ujian terlalu sering.\nHubungi pengawas untuk membuka kunci."
+            android:textColor="#FFFFFF" android:textSize="16sp" />
+        <Button android:id="@+id/btnUnlock"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="Kode pengawas" />
+    </LinearLayout>
+</FrameLayout>
