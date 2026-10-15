@@ -7,7 +7,7 @@ plugins {
 // atau gradle.properties (GAS_URL=...), atau placeholder.
 val gasUrl: String = System.getenv("GAS_URL")?.takeIf { it.isNotBlank() }
     ?: (project.findProperty("GAS_URL") as String?)
-    ?: "https://script.google.com/macros/s/GANTI_DENGAN_DEPLOYMENT_ID/exec"
+    ?: "https://script.google.com/macros/s/AKfycbx9U9IkRKYy_K3nlPyiwNFXtYdkhryiSmr2tmJHhSLQeb8tHTy9u-hRCr9zHXipxq3JTw/exec"
 
 android {
     namespace = "com.example.exambrowser"
