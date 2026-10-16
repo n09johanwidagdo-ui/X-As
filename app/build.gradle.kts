@@ -5,8 +5,8 @@ plugins {
 
 // URL Web App Google Apps Script. Diambil dari secret GAS_URL (GitHub Actions),
 // atau gradle.properties (GAS_URL=...), atau placeholder.
-val gasUrl: String = System.getenv("https://script.google.com/macros/s/AKfycbx9U9IkRKYy_K3nlPyiwNFXtYdkhryiSmr2tmJHhSLQeb8tHTy9u-hRCr9zHXipxq3JTw/exec")?.takeIf { it.isNotBlank() }
-    ?: (project.findProperty("https://script.google.com/macros/s/AKfycbx9U9IkRKYy_K3nlPyiwNFXtYdkhryiSmr2tmJHhSLQeb8tHTy9u-hRCr9zHXipxq3JTw/exec") as String?)
+val gasUrl: String = System.getenv("GAS_URL")?.takeIf { it.isNotBlank() }
+    ?: (project.findProperty("GAS_URL") as String?)
     ?: "https://script.google.com/macros/s/AKfycbx9U9IkRKYy_K3nlPyiwNFXtYdkhryiSmr2tmJHhSLQeb8tHTy9u-hRCr9zHXipxq3JTw/exec"
 
 android {
